@@ -1,1 +1,2 @@
-rvm use --create 1.9.2@iba2
+rvm_install_on_use_flag=1
+rvm use --create 1.9.3@iba2
