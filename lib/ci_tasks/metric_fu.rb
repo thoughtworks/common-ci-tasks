@@ -1,5 +1,3 @@
-if ENV["COVERAGE"]
-  require 'metric_fu'
-  require 'config'
-  require "metric_fu/#{Config.configuration}"
-end
+require 'metric_fu'
+require File.expand_path(File.dirname(__FILE__) + '/config')
+require File.expand_path(File.dirname(__FILE__) + "/metric_fu/#{CITasks::Config.configuration}")

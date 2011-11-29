@@ -20,7 +20,7 @@ module CITasks
       end
       
       desc 'Runs specs, coverage, features and metrics. Should be run on the ci loop'
-      task :ci => [ 'set_ci_env', 'spec', 'spinach', 'metrics:all']
+      task :ci => [ 'set_ci_env', 'spec', 'metrics:all', 'spinach']
     end
   end
 end

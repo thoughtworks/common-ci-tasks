@@ -1,5 +1,7 @@
-class Config
-  def self.configuration
-    Rails rescue nil ? :rails : :sinatra
+module CITasks
+  class Config
+    def self.configuration
+      Rails rescue nil ? :rails : :sinatra
+    end
   end
 end
