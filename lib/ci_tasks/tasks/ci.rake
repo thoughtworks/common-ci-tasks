@@ -3,18 +3,18 @@ task :set_ci_env do
   ENV['CC_BUILD_ARTIFACTS'] = 'On'
 end
 
-desc 'Run all examples'
-RSpec::Core::RakeTask.new(:spec)
+unless CiTasks::Config.rails?
+  desc 'Run all examples'
+  RSpec::Core::RakeTask.new(:spec)
+end
 
 namespace :spec do
   desc 'Run coverage'
   task :cov => [ 'set_ci_env', 'spec' ]
 end
 
-desc 'Run spinach features'
-task :spinach do
-  exec 'bundle exec spinach'
-end
+ci_tasks = [ 'set_ci_env', 'spec', 'metrics:all']
+ci_tasks.push 'jasmine:ci', 'spinach' if CiTasks::Config.rails?
 
 desc 'Runs specs, coverage, features and metrics. Should be run on the ci loop'
-task :ci => [ 'set_ci_env', 'spec', 'metrics:all', 'spinach']
+task :ci => ci_tasks
