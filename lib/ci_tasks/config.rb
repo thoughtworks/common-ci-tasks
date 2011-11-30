@@ -1,7 +1,12 @@
-module CITasks
+module CiTasks
   class Config
     def self.configuration
-      Rails rescue nil ? :rails : :sinatra
+      rails? ? :rails : :sinatra
     end
+
+    def self.rails?
+      Rails rescue nil
+    end
+    
   end
 end

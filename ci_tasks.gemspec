@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "ci_tasks/version"
 
 Gem::Specification.new do |s|
-  s.name        = "ci-tasks"
+  s.name        = "ci_tasks"
   s.version     = Ci::Tasks::VERSION
   s.authors     = ["Abril Dev Team"]
   s.email       = ["abril_iba_dev@thoughtworks.com"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{CI Tasks}
   s.description = %q{CI Tasks}
 
-  s.rubyforge_project = "ci-tasks"
+  s.rubyforge_project = "ci_tasks"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
