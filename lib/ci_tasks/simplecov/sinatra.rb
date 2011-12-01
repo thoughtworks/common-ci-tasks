@@ -4,6 +4,7 @@ SimpleCov.adapters.define 'sinatra' do
   add_filter '/spec/'
   add_filter '/config/'
   add_filter '/vendor/'
+  add_filter '/.bundle/'
   
   add_group 'Models', 'lib/'
 end
