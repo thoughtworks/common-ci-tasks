@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "fattr"
   s.add_runtime_dependency "arrayfields"
   s.add_runtime_dependency "map"
+  s.add_runtime_dependency "magic_encoding"
   
   s.add_development_dependency "geminabox"
 end
