@@ -11,6 +11,6 @@ else
   require 'rspec/core/version'
 
   load 'ci_tasks/tasks/ci.rake'
+  load 'ci_tasks/tasks/whitespace.rake'
 end
 
-load 'ci_tasks/tasks/whitespace.rake'
