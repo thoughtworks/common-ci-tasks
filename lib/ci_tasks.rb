@@ -9,6 +9,8 @@ if CiTasks::Config.rails?
 else
   require 'rspec/core/rake_task'
   require 'rspec/core/version'
-  
+
   load 'ci_tasks/tasks/ci.rake'
 end
+
+load 'ci_tasks/tasks/whitespace.rake'
