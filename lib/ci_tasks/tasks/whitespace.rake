@@ -47,9 +47,9 @@ task :whitespace do
     /Rakefile$/,
   ]
   EXCLUDE = [
-    /\/vendor\//,
-    /\/coverage\//,
-    /\/tmp\//,
+    /^vendor\//,
+    /^coverage\//,
+    /^tmp\//,
   ]
 
   files = `git ls-files -c -m -o`.split("\n").select do |f|
