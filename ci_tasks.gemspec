@@ -5,11 +5,11 @@ require "ci_tasks/version"
 Gem::Specification.new do |s|
   s.name        = "ci_tasks"
   s.version     = Ci::Tasks::VERSION
-  s.authors     = ["Abril Dev Team"]
-  s.email       = ["abril_iba_dev@thoughtworks.com"]
+  s.authors     = ["Carlos Villela, Rajat Vig, Irfan Shah et al"]
+  s.email       = ["opensource@thoughtworks.com"]
   s.homepage    = ""
   s.summary     = %q{CI Tasks}
-  s.description = %q{CI Tasks}
+  s.description = %q{Common tasks to be executed in Continuous Integration environments. VERY ALPHA!}
 
   s.rubyforge_project = "ci_tasks"
 
